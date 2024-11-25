@@ -29,6 +29,7 @@ function loadSong(index) {
     const song = playlist[index];
     audio.src = song.url;
     songTitle.textContent = song.name;
+    document.title = song.name;
     audio.load();
 
     audio.addEventListener('loadedmetadata', () => {
