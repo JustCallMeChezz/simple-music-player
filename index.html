@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <meta name="theme-color" content="#fbc0af">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="music.css">
+    <link rel="apple-touch-icon" href="icon/music.png" />
+    <link rel="icon" type="image/png" href="icon/music.png" />
+    <link rel="manifest" href="/icon/site.webmanifest" />
+  </head>
+  <body>
+    <div class="music-player" id="music-player">
+      <div id="thumbnail" class="thumbnail">
+        <i class="fas fa-music"></i>
+      </div>
+      <div class="song-info">
+        <div id="song-title">No song loaded</div>
+        <div class="time-stamps">
+          <span id="current-time">0:00</span>
+          <span id="duration">0:00</span>
+        </div>
+      </div>
+      <div class="progress-bar-thing">
+        <input type="range" id="progress-bar" class="progress-bar" min="0" max="100" value="0">
+      </div>
+      <div class="controls">
+        <button id="prev-btn"><i class="fas fa-backward"></i></button>
+        <button class="play-btn" id="play-btn"><i class="fas fa-play"></i></button>
+        <button id="next-btn"><i class="fas fa-forward"></i></button>
+      </div>
+      <div class="upload" id="upload">
+        <input type="file" id="file-input" accept="audio/*" multiple hidden />
+        <label for="file-input" class="upload-button">Choose Music</label>
+      </div>
+    </div>
+    <script src="music.js"></script>
+  </body>
+</html>
